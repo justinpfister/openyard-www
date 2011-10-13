@@ -1,0 +1,3 @@
+Openyard-www Directory
+------------------------------------------
+For the first time in coding history, Openyard is going to be programmed using a framework (Silex) along with many of it's more common extensions such as Doctrine for Database (Mysql). We'll also be using Git (Github.com) for version control. We're going to use a Silex Code base and all Openyard directories are going to pre-fixed with 'openyard-'....
