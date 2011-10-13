@@ -11,10 +11,14 @@ $app['db.config.password']  = '123test';
 $app['debug'] = false;
 
 // Local
-$app['locale'] = 'fr';
+$app['locale'] = 'en';
 $app['session.default_locale'] = $app['locale'];
 $app['translator.messages'] = array(
+    'en' => __DIR__.'/../Resources/locales/en.yml',
     'fr' => __DIR__.'/../Resources/locales/fr.yml',
+    'es' => __DIR__.'/../Resources/locales/es.yml',
+    'pl' => __DIR__.'/../Resources/locales/piglatin.yml'
+
 );
 
 // Cache

@@ -16,7 +16,7 @@ use SilexExtension\AsseticExtension;
 
 $app = new Silex\Application();
 
-require __DIR__ . '/config.php';
+require __DIR__ . '/../openyard-src/config.php';
 
 $app->register(new HttpCacheServiceProvider());
 
