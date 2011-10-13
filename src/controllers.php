@@ -8,7 +8,34 @@ use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\Form\FormBuilder;
 use Symfony\Component\Form\FormError;
 
+
+$app->match('/hello/{lang}/{name}', function($lang,$name) use ($app) {
+
+     //$app['LoaderInterface']->setLocale('en');
+    //echo $app->getLocale();
+
+    echo $app['translator']->setLocale($lang);
+   
+    return $app['twig']->render('layout.html.twig', array(
+                                                      'name' => $name
+                                                    ));
+});
+
+
+$app->match('/p/{prodid}/{title}', function($prodid,$title) use ($app) {
+
+     //$app['LoaderInterface']->setLocale('en');
+    //echo $app->getLocale();
+
+    return $app['twig']->render('layout.html.twig');
+});
+
+
+
+
+
 $app->match('/', function() use ($app) {
+
     return $app['twig']->render('layout.html.twig');
 })->bind('homepage');
 
@@ -29,6 +56,7 @@ $app->match('/login', function() use ($app) {
     $form = $builder
         ->add('email', 'email', array('label' => 'Email'))
         ->add('password', 'password', array('label' => 'Password'))
+
         ->getForm()
     ;
 

@@ -2,13 +2,13 @@
 
 // Databases
 $app['db.config.driver']    = 'pdo_mysql';
-$app['db.config.dbname']    = 'silex';
+$app['db.config.dbname']    = 'testsilex';
 $app['db.config.host']      = '127.0.0.1';
-$app['db.config.user']      = 'root';
-$app['db.config.password']  = '';
+$app['db.config.user']      = 'testsilex';
+$app['db.config.password']  = '123test';
 
 // Debug
-$app['debug'] = true;
+$app['debug'] = false;
 
 // Local
 $app['locale'] = 'fr';
@@ -25,7 +25,7 @@ $app['http_cache.cache_dir'] = $app['cache.path'] . '/http';
 
 // Assetic
 $app['assetic.path_to_cache']       = $app['cache.path'] . DIRECTORY_SEPARATOR . 'assetic' ;
-$app['assetic.path_to_web']         = __DIR__ . '/../web/assets';
+$app['assetic.path_to_web']         = __DIR__ . '/../openyard-www/assets';
 
 $app['assetic.input.path_to_assets']    = __DIR__ . '/../Resources/assets';
 $app['assetic.input.path_to_css']       = $app['assetic.input.path_to_assets'] . '/css/*.css';
