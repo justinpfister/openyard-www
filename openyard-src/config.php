@@ -8,7 +8,7 @@ $app['db.config.user']      = 'testsilex';
 $app['db.config.password']  = '123test';
 
 // Debug
-$app['debug'] = false;
+$app['debug'] = true;
 
 // Local
 $app['locale'] = 'en';
@@ -20,6 +20,10 @@ $app['translator.messages'] = array(
     'pl' => __DIR__.'/../Resources/locales/piglatin.yml'
 
 );
+
+// Openyard - Extensions
+$app['product'] = __DIR__ . "/../openyard-extensions/product";
+
 
 // Cache
 $app['cache.path'] = __DIR__ . '/../cache';

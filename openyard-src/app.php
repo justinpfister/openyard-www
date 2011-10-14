@@ -18,11 +18,6 @@ $app = new Silex\Application();
 
 require __DIR__ . '/../openyard-src/config.php';
 
-// Registering Openyard Extensions - START
-//$app->register(new Product());
-// END - Registering Openyard Extensions
-
-
 $app->register(new HttpCacheServiceProvider());
 
 $app->register(new SessionServiceProvider());

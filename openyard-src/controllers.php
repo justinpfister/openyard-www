@@ -23,19 +23,14 @@ $app->match('/hello/{lang}/{name}', function($lang,$name) use ($app) {
 });
 
 
-
-$app->match('/shit/{lang}/{name}', function($lang,$name) use ($app) {
+$app->match('/p/{prodid}/{title}', function($prodid,$title) use ($app) {
 
      //$app['LoaderInterface']->setLocale('en');
     //echo $app->getLocale();
 
-    $app['translator']->setLocale($lang);
-    echo $app['translator']->getLocale() . "love!";
-
-    return $app['twig']->render('layout.html.twig', array(
-                                                      'name' => $name
-                                                    ));
+    return $app['twig']->render('layout.html.twig');
 });
+
 
 
 
