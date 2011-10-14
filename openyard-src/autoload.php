@@ -10,6 +10,8 @@ $loader->registerNamespaces(array(
     'Silex'             => __DIR__.'/../vendor/silex/src',
     'SilexExtension'    => __DIR__.'/../vendor/Silex-extentions/fate/src',
     'Assetic'           => __DIR__.'/../vendor/assetic/src',
+
+    'Openyard'          => __DIR__.'/../openyard-extensions',
 ));
 $loader->registerPrefixes(array(
     'Pimple' => __DIR__.'/../vendor/silex/vendor/pimple/lib',

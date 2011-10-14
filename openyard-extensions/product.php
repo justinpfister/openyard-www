@@ -1,4 +1,10 @@
 <?php
+
+namespace Openyard;
+
+use Silex\Application;
+use Silex\ServiceProviderInterface;
+
 /**
  * Created by JetBrains PhpStorm.
  * User: Justin
@@ -7,14 +13,10 @@
  * To change this template use File | Settings | File Templates.
  */
  
-class Product {
-
-    private $title;
-    private $id;
-    private $description;
-
-    public function setTitle($title) {
-        return $this->title = $title;
-    }
-
+class product implements ServiceProviderInterface
+{
+      public function register(Application $app)
+      {
+         return true;
+       }
 }

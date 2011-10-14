@@ -25,8 +25,6 @@ $app->match('/hello/{lang}/{name}', function($lang,$name) use ($app) {
 
 $app->match('/p/{prodid}/{title}', function($prodid,$title) use ($app) {
 
-     //$app['LoaderInterface']->setLocale('en');
-    //echo $app->getLocale();
 
     return $app['twig']->render('layout.html.twig');
 });

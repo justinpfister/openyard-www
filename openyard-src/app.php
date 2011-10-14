@@ -14,6 +14,8 @@ use Silex\Provider\DoctrineServiceProvider;
 
 use SilexExtension\AsseticExtension;
 
+use Openyard\product;
+
 $app = new Silex\Application();
 
 require __DIR__ . '/../openyard-src/config.php';
@@ -25,6 +27,11 @@ $app->register(new SymfonyBridgesServiceProvider());
 $app->register(new ValidatorServiceProvider());
 $app->register(new FormServiceProvider());
 $app->register(new UrlGeneratorServiceProvider());
+
+// Start - Registering Openyard Classes
+//$app->register(new Openyard\product());
+               // End - Registering Openyard Classes
+
 
 $app->register(new TranslationServiceProvider(), array(
     'locale_fallback' => $app['locale'],
