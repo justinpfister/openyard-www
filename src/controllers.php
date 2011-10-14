@@ -14,7 +14,8 @@ $app->match('/hello/{lang}/{name}', function($lang,$name) use ($app) {
      //$app['LoaderInterface']->setLocale('en');
     //echo $app->getLocale();
 
-    echo $app['translator']->setLocale($lang);
+    $app['translator']->setLocale($lang);
+    echo $app['translator']->getLocale() . "love!";
    
     return $app['twig']->render('layout.html.twig', array(
                                                       'name' => $name
