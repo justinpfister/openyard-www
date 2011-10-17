@@ -14,7 +14,8 @@ use Silex\Provider\DoctrineServiceProvider;
 
 use SilexExtension\AsseticExtension;
 
-use Openyard\product;
+use Openyard\ProductExtension;
+
 
 $app = new Silex\Application();
 
@@ -29,8 +30,8 @@ $app->register(new FormServiceProvider());
 $app->register(new UrlGeneratorServiceProvider());
 
 // Start - Registering Openyard Classes
-//$app->register(new Openyard\product());
-               // End - Registering Openyard Classes
+$app->register(new Openyard\ProductExtension());
+// End - Registering Openyard Classes
 
 
 $app->register(new TranslationServiceProvider(), array(

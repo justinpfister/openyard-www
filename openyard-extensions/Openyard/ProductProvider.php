@@ -7,7 +7,7 @@ namespace Openyard;
  *
  * @author justin.pfister
  */
-class UrlShortener {
+class ProductMagic {
 
     /**
      * A list of urls with the url shortened name as a key
@@ -29,6 +29,11 @@ class UrlShortener {
      * @param string $url_file_name
      */
 //    public function __construct($url_file_name) {
+
+public function hello() {
+    return "world";
+}
+
     public function __construct() {
 
         $this->url_file = $url_file_name;
