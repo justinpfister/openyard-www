@@ -12,7 +12,7 @@ class ProductExtension implements ServiceProviderInterface {
 
     public function register(Application $app){
         $app['product'] = $app->share(function() use($app){
-            return new ProductMagic();
+            return new ProductProvider();
         });
     }
 }

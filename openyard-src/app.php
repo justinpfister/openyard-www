@@ -14,8 +14,6 @@ use Silex\Provider\DoctrineServiceProvider;
 
 use SilexExtension\AsseticExtension;
 
-use Openyard\ProductExtension;
-
 
 $app = new Silex\Application();
 
