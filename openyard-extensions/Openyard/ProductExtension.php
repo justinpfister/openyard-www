@@ -3,6 +3,7 @@ namespace Openyard;
 
 use Silex\ServiceProviderInterface;
 use Silex\Application;
+
 /**
  * Description of newPHPClass
  *
@@ -11,8 +12,17 @@ use Silex\Application;
 class ProductExtension implements ServiceProviderInterface {
 
     public function register(Application $app){
+
+        // ProductProvider
         $app['product'] = $app->share(function() use($app){
             return new ProductProvider();
         });
+
+        // ProductManager
+        $app['productdata'] = $app->share(function() use($app){
+            return new ProductManager();
+        });
+
+
     }
 }

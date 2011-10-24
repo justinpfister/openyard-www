@@ -8,7 +8,6 @@ use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\Form\FormBuilder;
 use Symfony\Component\Form\FormError;
 
-//use Openyard\ProductMagic;
 
 $app->match('/hello/{lang}/{name}', function($lang,$name) use ($app) {
 
@@ -25,7 +24,7 @@ $app->match('/p/{prodid}/{title}', function($prodid,$title) use ($app) {
 
         //$app['session']['user']
 
-        var_dump($app['session']);
+        //var_dump($app['session']);
         //echo $app['session']->read('email');
 
         $test1 = new $app['product'];
@@ -36,6 +35,11 @@ $app->match('/p/{prodid}/{title}', function($prodid,$title) use ($app) {
         echo "::::::";
         echo "Test2=" . $test2->getSize();
 
+        $test3 = new $app['productdata'];
+        $test3->setTest(34);
+        echo $test3->getTest();
+
+        
     // var_dump($app['product']);
         
     return $app['twig']->render('layout.html.twig');

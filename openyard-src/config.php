@@ -21,9 +21,6 @@ $app['translator.messages'] = array(
 
 );
 
-// Openyard - Extensions
-$app['product'] = __DIR__ . "/../openyard-extensions/product";
-
 
 // Cache
 $app['cache.path'] = __DIR__ . '/../cache';
