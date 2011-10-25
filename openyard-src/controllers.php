@@ -8,6 +8,8 @@ use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\Form\FormBuilder;
 use Symfony\Component\Form\FormError;
 
+use Silex\Provider\DoctrineServiceProvider;
+
 
 $app->match('/hello/{lang}/{name}', function($lang,$name) use ($app) {
 
@@ -38,6 +40,16 @@ $app->match('/p/{prodid}/{title}', function($prodid,$title) use ($app) {
         $test3 = new $app['productdata'];
         $test3->setTest(34);
         echo $test3->getTest();
+
+        $test3->ddb($app);
+
+
+        //$test = $app['db'];
+        //$results = $test->fetchAssoc('SELECT * FROM test_table');
+        //var_dump($results);
+
+
+
 
         
     // var_dump($app['product']);

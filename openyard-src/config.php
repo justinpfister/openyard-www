@@ -3,8 +3,8 @@
 // Databases
 $app['db.config.driver']    = 'pdo_mysql';
 $app['db.config.dbname']    = 'testsilex';
-$app['db.config.host']      = '127.0.0.1';
-$app['db.config.user']      = 'testsilex';
+$app['db.config.host']      = 'localhost';
+$app['db.config.user']      = 'silex';
 $app['db.config.password']  = '123test';
 
 // Debug
