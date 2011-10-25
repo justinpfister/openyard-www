@@ -6,7 +6,7 @@ use Silex\Application;
 
 class ProductManager {
     private $test;
-    private $conn;
+    private $app;
 
     public function __construct() {
         $this->test = 12;
@@ -23,9 +23,13 @@ class ProductManager {
         return true;
     }
 
-    public function ddb(Application $app) {
+    public function setApp($app) {
+        return $this->app = $app;
+    }
 
-              $test = $app['db'];
+    public function ddb() {
+
+              $test = $this->app['db'];
               $results = $test->fetchAssoc('SELECT * FROM test_table');
               var_dump($results);
         

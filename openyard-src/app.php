@@ -13,6 +13,7 @@ use Silex\Provider\TwigServiceProvider;
 use Silex\Provider\DoctrineServiceProvider;
 
 use SilexExtension\AsseticExtension;
+use SilexExtension\MemcacheExtension;
 
 
 $app = new Silex\Application();
@@ -30,6 +31,16 @@ $app->register(new UrlGeneratorServiceProvider());
 // Start - Registering Openyard Classes
 $app->register(new Openyard\ProductExtension());
 // End - Registering Openyard Classes
+
+
+
+//Memcache
+$app->register(new MemcacheExtension(), array(
+    'memcache.library'    => 'memcache',
+    'memcache.server' => array(
+        array('127.0.0.1', 11211)
+    )
+));
 
 
 $app->register(new TranslationServiceProvider(), array(

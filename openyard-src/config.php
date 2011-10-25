@@ -8,7 +8,7 @@ $app['db.config.user']      = 'silex';
 $app['db.config.password']  = '123test';
 
 // Debug
-$app['debug'] = true;
+$app['debug'] = false;
 
 // Local
 $app['locale'] = 'en';
