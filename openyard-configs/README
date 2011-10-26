@@ -21,11 +21,15 @@ The server steps should generally be completed in order.
         aptitude -y install build-essential
     apt-get install python-software-properties
 
+    Other Seemingly Critical updates : libxslt1-dev, libgd2-xpm-dev, libxt-dev, libperl-dev
+    Things to think about : apt-get source
+
     Install NGIN-X
     -----------------------------------
-    add-apt-repository ppa:nginx/stable     Note : ppa helps modify the apt-get dictionary so the nginx (most stable) is retrieved instead of the default.
-    apt-get update                          Note : this step is always required after you modify the apt-get repository
-    apt-get install nginx                   Note : install the web server!
+    add-apt-repository ppa:nginx/stable         Note : ppa helps modify the apt-get dictionary so the nginx (most stable) is retrieved instead of the default.
+    add-apt-repository ppa:nginx/development    Note : most up to date development version
+    apt-get update                              Note : this step is always required after you modify the apt-get repository
+    apt-get install nginx                       Note : install the web server!
 
     Install PHP
     -----------------------------------
