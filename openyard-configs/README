@@ -16,20 +16,53 @@ SERVER SETUP NOTES:
 ----------------------------
 The server steps should generally be completed in order.
 
-    apt-get update
-    apt-get install aptitude
-        aptitude -y install build-essential
-    apt-get install python-software-properties
+    Create User
+    -----------
+    adduser [justin]
+    groupadd [webdev]
+    usermod -a -G [webdev] [justin]
+    [Allow users in 'admin' group to sudo] -- see : visudo command (Should be good by default)
+    groupadd admin
+    usermod -a -G [admin] [justin]
 
-    Other Seemingly Critical updates : libxslt1-dev, libgd2-xpm-dev, libxt-dev, libperl-dev
+
+    SECURITY Settings
+    ------------------
+    Disable Root SSH :
+        - sudo nano /etc/ssh/sshd_config
+            -PermitRootLogin no
+        - sudo /etc/init.d/ssh restart
+        
+
+    Application Installation
+    -------------------------
+    sudo apt-get -y update
+    sudo apt-get -y upgrade
+    sudo apt-get -y install aptitude
+    sudo aptitude -y install build-essential
+    sudo apt-get -y install python-software-properties
+
+    Other Seemingly Critical updates :
+    sudo apt-get -y install libxslt1-dev libgd2-xpm-dev libxt-dev libperl-dev
+    sudo aptitude -y install libc6 libpcre3 libpcre3-dev libpcrecpp0 libssl0.9.8 libssl-dev zlib1g zlib1g-dev lsb-base
+
     Things to think about : apt-get source
 
     Install NGIN-X
+
+    With APT-GET
     -----------------------------------
-    add-apt-repository ppa:nginx/stable         Note : ppa helps modify the apt-get dictionary so the nginx (most stable) is retrieved instead of the default.
-    add-apt-repository ppa:nginx/development    Note : most up to date development version
-    apt-get update                              Note : this step is always required after you modify the apt-get repository
-    apt-get install nginx                       Note : install the web server!
+        add-apt-repository ppa:nginx/stable         Note : ppa helps modify the apt-get dictionary so the nginx (most stable) is retrieved instead of the default.
+        sudo add-apt-repository ppa:nginx/development    Note : most up to date development version
+        apt-get update                              Note : this step is always required after you modify the apt-get repository
+        apt-get install nginx                       Note : install the web server!
+
+    With Source Files
+    ------------------------------------
+        apt-get source nginx
+
+
+
 
     Install PHP
     -----------------------------------

@@ -28,7 +28,29 @@
 --with-mail_ssl_module \
 --with-http_perl_module \
 --add-module=/build/buildd/nginx-1.1.5/debian/modules/nginx-echo \
---add-module=/home/justin/apps/nginx/nginx-upstream
-
 --add-module=/build/buildd/nginx-1.1.5/debian/modules/nginx-upstream-fair
 
+
+
+
+sudo ./configure \
+--sbin-path=/usr/local/sbin \
+--with-debug \
+--with-http_addition_module \
+--with-http_dav_module \
+--with-http_geoip_module \
+--with-http_gzip_static_module \
+--with-http_image_filter_module \
+--with-http_realip_module \
+--with-http_stub_status_module \
+--with-http_ssl_module \
+--with-http_sub_module \
+--with-http_xslt_module \
+--with-ipv6 \
+--with-sha1=/usr/include/openssl \
+--with-md5=/usr/include/openssl \
+--with-mail \
+--with-mail_ssl_module \
+--with-http_perl_module \
+--add-module=/home/justin/sources/justinpfister-nginx-upstream-fair-2131c73 \
+--add-module=/home/justin/sources/justinpfister-echo-nginx-module-f930c02
