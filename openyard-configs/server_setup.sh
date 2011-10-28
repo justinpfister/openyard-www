@@ -17,70 +17,21 @@ sudo aptitude -y install build-essential
 
 sudo apt-get -y install python-software-properties
 
-sudo apt-get -y install libxslt1-dev libgd2-xpm-dev libxt-dev libperl-dev libgeoip-dev imagemagick perlmagick
+sudo apt-get -y install libxslt1-dev libgd2-xpm-dev libxt-dev libperl-dev libgeoip-dev imagemagick perlmagick git
 
-sudo aptitude -y install libc6 libpcre3 libpcre3-dev libpcrecpp0 libssl0.9.8 libssl-dev zlib1g zlib1g-dev lsb-base
-
-
-#####
-## INSTALL NGINX
-#########
-
-sudo add-apt-repository ppa:nginx/development
-
-sudo apt-get -y update
-
-sudo apt-get -y upgrade
-
-mkdir ~/sources
-
-cd ~/sources/
-
-sudo wget http://nginx.org/download/nginx-1.1.6.tar.gz
-sudo wget -O nginx-upstream-fair.tar.gz https://github.com/justinpfister/nginx-upstream-fair/tarball/master
-sudo wget -O nginx-echo.tar.gz https://github.com/justinpfister/echo-nginx-module/tarball/master
-
-sudo tar -zxvf nginx-upstream-fair.tar.gz
-
-sudo tar -zxvf nginx-echo.tar.gz
-               
-sudo tar -zxvf nginx-1.1.6.tar.gz
-
-cd nginx-1.1.6/
+sudo aptitude -y install libc6 libpcre3 libpcre3-dev libpcrecpp0 libssl0.9.8 libssl-dev zlib1g zlib1g-dev lsb-base ssl-cert
 
 
-sudo ./configure \
---sbin-path=/usr/local/sbin \
---with-debug \
---with-http_addition_module \
---with-http_dav_module \
---with-http_geoip_module \
---with-http_gzip_static_module \
---with-http_image_filter_module \
---with-http_realip_module \
---with-http_stub_status_module \
---with-http_ssl_module \
---with-http_sub_module \
---with-http_xslt_module \
---with-ipv6 \
---with-sha1=/usr/include/openssl \
---with-md5=/usr/include/openssl \
---with-mail \
---with-mail_ssl_module \
---with-http_perl_module \
---add-module=/home/justin/sources/justinpfister-nginx-upstream-fair-2131c73 \
---add-module=/home/justin/sources/justinpfister-echo-nginx-module-f930c02
 
-sudo make
-
-## sudo kill `cat /usr/local/nginx/logs/nginx.pid`
-
-sudo make install
-
-sudo /usr/local/sbin/nginx
-
-
-#####
-## NGINX INSTALLED
 #################
+## Install MySQL
+##########################
+
+#sudo add-apt-repository ppa:nathan-renniewaldock/ppa
+
+#sudo apt-get update
+
+#sudo apt-get -y install mysql-server
+
+
 

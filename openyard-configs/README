@@ -7,8 +7,8 @@ Most of the files in the Openyard .git repo are designed to help run the e-comme
 BASIC DIRECTORY SECURITY:
 ---------------------------
 Change Directory            cd /var
-Change ownership            sudo chown -R www-data:webdev www
-Modify ownership            sudo chmod -R ug=wrx,o= www
+Change ownership            sudo chown -R www-data:webdev /var/www
+Modify ownership            sudo chmod -R ug=wrx,o= www /var/www
 
 
 
@@ -66,13 +66,17 @@ The server steps should generally be completed in order.
 
     Install PHP
     -----------------------------------
-    add-apt repository ppa:{get info}/ppa   Note : if you want the latest build, you'll need to get connect to a ppa who has completed it. Else don't worry about it.
+    add-apt repository ppa:ppa:nathan-renniewaldock/ppa   Note : if you want the latest build, you'll need to get connect to a ppa who has completed it. Else don't worry about it.
     apt-get update
-    apt-get install php???                  Note : the exact command needs to be found. but php install is really well documented
+    apt-get -y install php5                  Note : the exact command needs to be found. but php install is really well documented
 
     Install MySQL
     ------------------------------------
-    apt-get install mysql???                Note : Please verify
+    sudo add-apt repository ppa:ppa:nathan-renniewaldock/ppa   Note : if you want the latest build, you'll need to get connect to a ppa who has completed it. Else don't worry about it.
+    sudo apt-get update
+    sudo apt-get -y install mysql-server                Note : Please verify
+
+    ### Choose No Configuration ###
 
     Install Memcached
     ------------------------------------
