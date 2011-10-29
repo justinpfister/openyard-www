@@ -30,7 +30,7 @@ class ProductManager {
     public function ddb() {
 
               $test = $this->app['db'];
-              $results = $test->fetchAssoc('SELECT * FROM test_table');
+              $results = $test->fetchAssoc('SELECT * FROM users');
               var_dump($results);
         
         
