@@ -5,7 +5,7 @@ $app['db.config.driver']    = 'pdo_mysql';
 $app['db.config.dbname']    = 'testsilex';
 $app['db.config.host']      = 'antijob.com';
 $app['db.config.user']      = 'root';
-$app['db.config.password']  = 'zxasqw12';
+$app['db.config.password']  = 'testing';
 
 // Debug
 $app['debug'] = false;
