@@ -2,10 +2,10 @@
 
 // Databases
 $app['db.config.driver']    = 'pdo_mysql';
-$app['db.config.dbname']    = 'testsilex';
+$app['db.config.dbname']    = 'testdb';
 $app['db.config.host']      = 'antijob.com';
-$app['db.config.user']      = 'root';
-$app['db.config.password']  = 'testing';
+$app['db.config.user']      = 'test';
+$app['db.config.password']  = 'test';
 
 // Debug
 $app['debug'] = false;
