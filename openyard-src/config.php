@@ -3,9 +3,9 @@
 // Databases
 $app['db.config.driver']    = 'pdo_mysql';
 $app['db.config.dbname']    = 'testsilex';
-$app['db.config.host']      = 'localhost';
-$app['db.config.user']      = 'silex';
-$app['db.config.password']  = '123test';
+$app['db.config.host']      = 'antijob.com';
+$app['db.config.user']      = 'root';
+$app['db.config.password']  = 'zxasqw12';
 
 // Debug
 $app['debug'] = false;
