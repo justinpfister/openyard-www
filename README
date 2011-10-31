@@ -4,3 +4,10 @@ For the first time in coding history, Openyard is going to be programmed using a
 
 
 git remote add upstream git://github.com/lyrixx/Silex-Kitchen-Edition.git
+git fetch upstream
+git merge upstream/master
+
+
+ git push origin master
+
+ 
