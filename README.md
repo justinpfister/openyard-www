@@ -1,3 +1,8 @@
+Openyard Source Files
+=======================
+Built from the Silex - Kitchen Edition base. While this is becoming less critical - it offered a way to stay on top of developments in the silex community.
+
+
 Silex - Kitchen Edition
 =======================
 

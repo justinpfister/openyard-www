@@ -41,7 +41,7 @@ $app->match('/p/{prodid}/{title}', function($prodid,$title) use ($app) {
 
         $test3 = new $app['productdata'];
         $test3->setTest(34);
-        echo $test3->getTest();
+         echo $test3->getTest();
 
         $test3->setApp($app);
         $test3->ddb();
